@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #0f0e0e;
+    background-color: #ececec;
+}
+header {
+    padding: 20px;
+    color: #eceaea;
+    background-color: #172c41;
+    text-align: center;
+}
+h1 {
+    margin: 0.67em 0;
+    font-size: 48px;
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #172c41;
+}
+input,
+select {
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #e4e4e4;
+    border-radius: 5px;
+    background-color: #eceaea;
+    color: #0f0e0e;
+    font: inherit;
+}
+#search-input {
+    width: 188px;
+}
+#sort-select {
+    width: 190px;
+}
+.movie-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+.movie-card {
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #e4e4e4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+.movie-poster,
+.poster-placeholder {
+    display: block;
+    width: 200px;
+    max-width: 100%;
+    height: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.poster-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: #4d4d4d;
+    background-color: #e4e4e4;
+}
+.movie-card h2 {
+    margin: 20px 0;
+    font-size: 24px;
+}
+.movie-card p {
+    margin: 16px 0;
+    font-size: 16px;
+}
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px 0;
+}
+.pagination button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #eceaea;
+    background-color: #138cdd;
+    font: inherit;
+    cursor: pointer;
+}
+.pagination button:hover:not(:disabled) {
+    background-color: #138cdd;
+}
+.pagination button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+:focus-visible {
+    outline: 2px solid #0b61b3;
+    outline-offset: 3px;
+}
+.status-message {
+    margin: 30px 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+footer {
+    padding: 10px 20px 20px;
+    color: #4d4d4d;
+    text-align: center;
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+@media (max-width: 580px) {
+    h1 {
+        font-size: 36px;
+    }
+    .controls {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .movie-container {
+        grid-template-columns: 1fr;
+    }
+}
